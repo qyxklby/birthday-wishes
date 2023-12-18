@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>祝姐姐生日快乐</title>
+  <style>
+    /* 添加背景动画 */
+    body {
+      background-image: url("fireworks.gif");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    /* 居中文本内容 */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-size: 24px;
+    }
+
+    /* 添加动态爱心 */
+    .heart {
+      animation: heartbeat 1.5s ease-in-out infinite;
+    }
+
+    /* 心形动画关键帧 */
+    @keyframes heartbeat {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <audio src="birthday_song.mp3" autoplay loop></audio>
+  <div class="content">
+    <div class="heart">❤️</div>
+    <h1>祝姐姐生日快乐！</h1>
+  </div>
+
+  <script>
+    // 加载背景动画图片
+    window.addEventListener("DOMContentLoaded", function() {
+      var bgImg = new Image();
+      bgImg.src = "fireworks.gif";
+    });
+  </script>
+</body>
+</html>
